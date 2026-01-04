@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/traffic
+    username: traffic
+    password: traffic
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG

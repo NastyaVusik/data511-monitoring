@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:16:///traffic
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    enabled: false
+
+logging:
+  level:
+    root: WARN
