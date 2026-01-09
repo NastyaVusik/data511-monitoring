@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: traffic511-monitoring-dev
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      DB_URL: jdbc:postgresql://postgres:5432/traffic
+      DB_USERNAME: traffic
+      DB_PASSWORD: traffic
+    depends_on:
+      postgres:
+        condition: service_healthy

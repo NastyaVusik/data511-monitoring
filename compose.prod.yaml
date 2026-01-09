@@ -1,0 +1,12 @@
+services:
+  app:
+    image: traffic-monitor:latest
+    container_name: traffic511-monitoring-prod
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_URL: ${DB_URL}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    depends_on:
+      postgres:
+        condition: service_healthy
