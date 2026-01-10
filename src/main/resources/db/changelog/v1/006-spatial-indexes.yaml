@@ -1,0 +1,8 @@
+  - changeSet:
+      id: 006-spatial-indexes
+      author: anastasiya vusik
+      changes:
+        - sql:
+            sql: CREATE INDEX idx_road_segment_geom ON road_segment USING GIST (geometry);
+        - sql:
+            sql: CREATE INDEX idx_event_location ON traffic_event USING GIST (location);

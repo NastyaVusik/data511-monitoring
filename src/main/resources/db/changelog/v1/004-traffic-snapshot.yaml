@@ -1,0 +1,28 @@
+  - changeSet:
+      id: 004-traffic-snapshot
+      author: anastasiya vusik
+      changes:
+        - createTable:
+            tableName: traffic_snapshot
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: road_segment_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: speed_kmh
+                  type: NUMERIC(5,2)
+              - column:
+                  name: congestion_level
+                  type: INTEGER
+              - column:
+                  name: measured_at
+                  type: TIMESTAMP WITH TIME ZONE
+                  constraints:
+                    nullable: false

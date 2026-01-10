@@ -1,0 +1,10 @@
+  - changeSet:
+      id: 005-fk-snapshot-road
+      author: anastasiya vusik
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: traffic_snapshot
+            baseColumnNames: road_segment_id
+            referencedTableName: road_segment
+            referencedColumnNames: id
+            constraintName: fk_snapshot_road
