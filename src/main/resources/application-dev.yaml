@@ -1,0 +1,22 @@
+spring:
+  docker:
+    compose:
+      enabled: ${SPRING_DOCKER_COMPOSE_ENABLED:true}
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/traffic}
+    username: ${SPRING_DATASOURCE_USERNAME:traffic}
+    password: ${SPRING_DATASOURCE_PASSWORD:traffic}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true  
+
+  liquibase:
+    enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
