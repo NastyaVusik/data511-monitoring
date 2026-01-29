@@ -36,6 +36,7 @@ public class RoadSegment {
     @Column(name = "external_id", nullable = false)
     private String externalId;
 
+    @Column
     private String name;
 
     @Column(columnDefinition = "geometry(LineString,4326)")
